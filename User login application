@@ -1,0 +1,24 @@
+print("*********\n Welcome to Global Game\n**********\n")
+
+nick_name= "Ottoman Empire"
+password= "otto1453"
+login_bonus= 3
+
+while True:
+    kullanıcı_adı= input("Nick name:")
+    sifre= input("Password:")
+    if(kullanıcı_adı != nick_name and sifre == password):
+        print("Check your nick name...")
+        login_bonus -=1
+    elif(kullanıcı_adı != nick_name and sifre != password):
+        print("Check your nick name and password...")
+        login_bonus -=1
+    elif(kullanıcı_adı == nick_name and sifre != password):
+        print("Check your password...")
+        login_bonus -=1
+    else:
+        print("Welcome to Global Game...")
+        break
+    if(login_bonus == 0):
+        print("Your login has expired...")
+        break
