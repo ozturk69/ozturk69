@@ -5,15 +5,15 @@ password= "otto1453"
 login_bonus= 3
 
 while True:
-    kullanıcı_adı= input("Nick name:")
-    sifre= input("Password:")
-    if(kullanıcı_adı != nick_name and sifre == password):
+    nick= input("Nick name:")
+    key= input("Password:")
+    if(nick != nick_name and key == password):
         print("Check your nick name...")
         login_bonus -=1
-    elif(kullanıcı_adı != nick_name and sifre != password):
+    elif(nick!= nick_name and key != password):
         print("Check your nick name and password...")
         login_bonus -=1
-    elif(kullanıcı_adı == nick_name and sifre != password):
+    elif(nick == nick_name and key != password):
         print("Check your password...")
         login_bonus -=1
     else:
