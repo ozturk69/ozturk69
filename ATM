@@ -1,0 +1,28 @@
+print("**********\nÖZTÜRK BANK\n**********\n")
+print("""
+İşlemler:
+1. Bakiye Sorgulama
+2. Para Yatırma
+3. Para Çekme
+Programdan 'q' tuşu ile çıkabilirsiniz.
+""")
+bakiye= 4250
+while True:
+    işlem= input("İşlemi giriniz:")
+    if(işlem == "q"):
+        print("Yine bekleriz...")
+        break
+    elif(işlem == "1"):
+        print("Bakiyeniz {} tl'dir".format(bakiye))
+    elif(işlem == "2"):
+        miktar= int(input("Yatırmak istediğiniz miktar:"))
+        bakiye +=miktar
+    elif(işlem == "3"):
+        miktar= int(input("Çekmek istediğiniz miktar:"))
+        if(bakiye - miktar <0):
+            print("Bu miktarı çekemezsiniz.")
+            print("Bakiyeniz {} tl'dir".format(bakiye))
+            continue
+            bakiye -= miktar
+        else:
+            print("Lütfen geçerli bir işlem giriniz...")
